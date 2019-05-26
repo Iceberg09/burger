@@ -17,7 +17,7 @@ router.get('/index', function (req, res)
 });
 
 // Create a New Burger
-router.post('/burger/create', function (req, res) 
+router.post('/burgers/create', function (req, res) 
 {
   burgers.insertOne(req.body.burger_name, function() 
   {
@@ -26,7 +26,7 @@ router.post('/burger/create', function (req, res)
 });
 
 // Devour a Burger
-router.post('/burger/eat/:id', function (req, res) 
+router.post('/burgers/eat/:id', function (req, res) 
 {
   burgers.updateOne(req.params.id, function() 
   {
